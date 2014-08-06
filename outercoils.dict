@@ -1,0 +1,36 @@
+{
+    "A-X": {
+         "Amp": 9.8,
+        "Freq": 10,
+        "Dur": 100,
+        "Keep": 10,
+        "RelayPort": 3,
+        "VoltageDivider": 2
+    },
+    "A-Z": {
+        "Amp": 9.8,
+        "Freq": 10,
+        "Dur": 100,
+        "Keep": 10,
+        "RelayPort": 4,
+        "VoltageDivider": 2
+    },
+    "A-Y": {
+        "Amp": 9.8,
+        "Freq": 10,
+        "Dur": 100,
+        "Keep": 10,
+        "RelayPort": 7,
+        "VoltageDivider": 3
+    },
+    "All": {
+        "Amp": 0,
+        "Freq": 16,
+        "Dur": 100,
+        "Keep": 10,
+        "RelayPort": 0,
+        "VoltageDivider": 3
+    },
+    "Offset": 0,
+    "Device": "Dev1"
+}

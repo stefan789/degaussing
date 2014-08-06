@@ -1,0 +1,20 @@
+{
+    "panel": {
+        "Amp": 9.8,
+        "Freq": 10,
+        "Dur": 100,
+        "Keep": 10,
+        "RelayPort": 10,
+        "VoltageDivider": 5
+    },
+    "All": {
+        "Amp": 0,
+        "Freq": 16,
+        "Dur": 100,
+        "Keep": 1,
+        "RelayPort": 7,
+        "VoltageDivider": 1
+    },
+    "Offset": 0,
+    "Device": "Dev1"
+}
