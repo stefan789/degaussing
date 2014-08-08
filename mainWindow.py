@@ -90,7 +90,7 @@ class mainWindow(wx.Frame):
                 wx.TE_MULTILINE | wx.TE_READONLY)
         progressbag.Add(self.status, pos = (10,0))
         self.saveStatus = wx.CheckBox(self.panel, label = "Save status to log file")
-        self.saveStatus.SetValue(False)
+        self.saveStatus.SetValue(True)
         progressbag.Add(self.saveStatus, pos = (11,0))
 
 

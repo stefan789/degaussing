@@ -26,6 +26,7 @@ class Controller:
         pub.subscribe(self.CoilsChanged, "COILCHANGE")
         pub.subscribe(self.statusUpdate, "status.update")
         pub.subscribe(self.degaussprogress, "degauss.progress")
+        pub.subscribe(self.writeStatus, "status.update")
 
     def setModelCoils(self, coils):
         self.model.setCoils(coils)
