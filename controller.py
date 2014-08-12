@@ -158,15 +158,14 @@ class Controller:
         state4 = self.view.advWin.coilP.rb4.GetValue()
         state5 = self.view.advWin.coilP.rb5.GetValue()
         if state5 == True:
-            self.view.showAdvTextLine(True)
+            self.view.showAdvFileSelector(True)
         else:
-            self.view.advWin.coilP.text.SetValue("")
-            self.view.showAdvTextLine(False)
+            self.view.showAdvFileSelector(False)
 
     def nbpagechange(self, e):
         if self.view.advWin.nb.GetSelection() == 1:
             if self.view.advWin.coilP.rb5.GetValue():
-                fil = self.view.advWin.coilP.text.GetValue()
+                fil = self.view.advWin.coilP.coilfi.GetValue()
                 if fil == "":
                     self.view.advWin.nb.SetSelection(0)
                     self.view.showCustomFileAlert()
