@@ -46,7 +46,8 @@ class Controller:
 
     def AdvBtn(self, e):
         self.tmpcoils = copy.deepcopy(self.model.coils)
-        self.view.createAdvWin(self.tmpcoils)
+        files = self.getdictfileslist()
+        self.view.createAdvWin(self.tmpcoils, files)
         self.view.advWin.okbutton.Bind(wx.EVT_BUTTON, self.onAdvOk)
         self.view.advWin.resetbutton.Bind(wx.EVT_BUTTON, self.onAdvReset)
         self.view.advWin.cancelbutton.Bind(wx.EVT_BUTTON, self.onAdvCancel)
@@ -227,3 +228,8 @@ class Controller:
     def degaussprogress(self, status, extra=None):
         self.view.mainWin.status.AppendText(str(status) + "\n")
 
+    def getdictfileslist(self):
+        import os
+        files = os.listdir(os.curdir)
+        dictfiles = [i for i in files if i.endswith(".dict")]
+        return dictfiles

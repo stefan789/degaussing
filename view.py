@@ -7,9 +7,10 @@ class View():
         self.mainWin = mainWindow.mainWindow(parent)
         self.mainWin.Show()
 
-    def createAdvWin(self, coils):
+    def createAdvWin(self, coils, files):
         self.advWin = advWindow.advWindow(self.mainWin)
         self.setCoilSelectorList(coils)
+        self.setFileSelectorList(files)
         self.advWin.Show()
 
     def setCoilSelectorList(self, coils):
@@ -20,6 +21,10 @@ class View():
         self.advWin.degaP.textFreq.SetValue(str(coils[str(choice)]["Freq"]))
         self.advWin.degaP.textDur.SetValue(str(coils[str(choice)]["Dur"]))
         self.advWin.degaP.textKeep.SetValue(str(coils[str(choice)]["Keep"]))
+
+    def setFileSelectorList(self, files):
+        self.advWin.coilP.coilfi.SetItems(files)
+        self.advWin.coilP.coilfi.SetSelection(0)
 
     def confirmAbort(self):
         dlg = wx.MessageDialog(self.mainWin, "Do you really want to quit the app?", "Confirm Exit", wx.OK|wx.CANCEL|wx.ICON_QUESTION)
@@ -39,6 +44,14 @@ class View():
             self.advWin.coilP.text.Hide()
             self.advWin.coilP.panel.Layout()
 
+    def showAdvFileSelector(self, state):
+        if state:
+            self.advWin.coilP.coilfi.Show()
+            self.advWin.coilP.panel.Layout()
+        else:
+            self.advWin.coilP.coilfi.Hide()
+            self.advWin.coilP.panel.Layout()
+    
     def showCustomFileAlert(self):
         wx.MessageBox("No file specified", "Error", wx.OK)
 

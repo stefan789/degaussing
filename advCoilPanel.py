@@ -25,7 +25,8 @@ class advCoilPanel(wx.Panel):
         self.labelrb3 = wx.StaticText(self.panel, label = "Outer coils")
         self.labelrb4 = wx.StaticText(self.panel, label = "All coils")
         self.labelrb5 = wx.StaticText(self.panel, label = "Custom coil file")
-        self.text = wx.TextCtrl(self.panel)
+#        self.text = wx.TextCtrl(self.panel)
+        self.coilfi = wx.ComboBox(self.panel, -1, "", wx.DefaultPosition, (200,-1), "", wx.CB_DROPDOWN)
 
         bagSizer.Add((340,-1), pos = (0,1))
 
@@ -41,7 +42,7 @@ class advCoilPanel(wx.Panel):
         bagSizer.Add(self.labelrb3, pos = (3,1), flag = wx.ALIGN_CENTER_VERTICAL)
         bagSizer.Add(self.labelrb4, pos = (4,1), flag = wx.ALIGN_CENTER_VERTICAL)
         bagSizer.Add(self.labelrb5, pos = (5,1), flag = wx.ALIGN_CENTER_VERTICAL)
-        bagSizer.Add(self.text, pos = (6,1), flag =
+        bagSizer.Add(self.coilfi, pos = (6,1), flag =
                 wx.ALIGN_CENTER_VERTICAL|wx.EXPAND)
         bagSizer.Add((-1,1), pos = (7,1))
 
@@ -53,7 +54,8 @@ class advCoilPanel(wx.Panel):
         topSizer.Add(outerbagsizer, wx.EXPAND)
         self.panel.SetSizer(topSizer)
 
-        self.text.Hide()
+        self.coilfi.Hide()
+        self.coilfi.Show()
 
 
         
