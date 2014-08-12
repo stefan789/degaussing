@@ -230,5 +230,6 @@ class Controller:
     def getdictfileslist(self):
         import os
         files = os.listdir(os.curdir)
-        dictfiles = [i for i in files if i.endswith(".dict")]
+        exclude = ("innercoils.dict", "middlecoils.dict", "outercoils.dict", "allcoils.dict")
+        dictfiles = [i for i in files if i.endswith(".dict") and i not in exclude]
         return dictfiles
