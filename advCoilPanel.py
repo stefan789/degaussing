@@ -55,7 +55,7 @@ class advCoilPanel(wx.Panel):
         self.panel.SetSizer(topSizer)
 
         self.coilfi.Hide()
-        self.coilfi.Show()
+#        self.coilfi.Show()
 
 
         
