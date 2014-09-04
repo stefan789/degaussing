@@ -2,7 +2,7 @@
     "panel": {
         "Amp": 9.8,
         "Freq": 10,
-        "Dur": 100,
+        "Dur": 500,
         "Keep": 10,
         "RelayPort": 10,
         "VoltageDivider": 5

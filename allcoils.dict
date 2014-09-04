@@ -1,5 +1,5 @@
 {
-    "I-YZ": {
+    "L coil": {
         "Amp": 9.8,
         "Freq": 10,
         "Dur": 50,
@@ -31,7 +31,7 @@
         "RelayPort": 7,
         "VoltageDivider": 3
     },
-    "I-YZ2": {
+    "L coil2": {
         "Amp": 9.8,
         "Freq": 10,
         "Dur": 50,

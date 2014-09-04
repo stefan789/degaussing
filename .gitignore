@@ -1,1 +1,3 @@
 *.pyc
+*.dict
+log.txt
