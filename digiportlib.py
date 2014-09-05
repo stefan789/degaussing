@@ -71,7 +71,17 @@ class SwitchCoil():
         pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
         #print self.di.read()
 
-"""    def activate(self, nr):
+    def activate(self, nr):
+        self.do.switch(nr)
+	time.sleep(1)
+	pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
+    def deactivate(self, nr):
+        self.do.switch(nr)
+	time.sleep(1)
+	pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
+
+"""    
+def activate(self, nr):
         if nr > self.nrchans-1:
             pass
         else:
@@ -88,12 +98,3 @@ class SwitchCoil():
                 self.do.switch(nr)
         pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
 """
-    def activate(self, nr):
-        self.do.switch(nr)
-	time.sleep(1)
-	pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
-			
-    def deactivate(self, nr):
-        self.do.switch(nr)
-	time.sleep(1)
-	pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
