@@ -1,27 +1,11 @@
 {
-    "I-X": {
+    "L coil": {
         "Amp": 9.8,
         "Freq": 10,
-        "Dur": 100,
-        "Keep": 10,
-        "RelayPort": 0,
-        "VoltageDivider": 0
-    },
-    "I-Z": {
-        "Amp": 9.8,
-        "Freq": 10,
-        "Dur": 100,
-        "Keep": 10,
-        "RelayPort": 1,
-        "VoltageDivider": 0
-    },
-    "I-Y": {
-        "Amp": 9.8,
-        "Freq": 10,
-        "Dur": 100,
+        "Dur": 50,
         "Keep": 10,
         "RelayPort": 2,
-        "VoltageDivider": 1
+        "VoltageDivider": 4
     },
     "All": {
         "Amp": 0,
