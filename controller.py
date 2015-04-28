@@ -115,16 +115,16 @@ class Controller:
                 self.tmpcoils = self.getModelCoilsfromfile(str(fil))
                 pub.sendMessage("status.update", status=str(fil))
         elif self.view.advWin.coilP.rb1.GetValue():
-            pub.sendMessage("status.update", status="Inner coils selected")
+            pub.sendMessage("status.update", status="MSR inner layer selected")
             self.tmpcoils = self.getModelCoilsfromfile("innercoils.dict")
         elif self.view.advWin.coilP.rb2.GetValue():
-            pub.sendMessage("status.update", status="Middle coils selected")
+            pub.sendMessage("status.update", status="MSR outer layer selected")
             self.tmpcoils = self.getModelCoilsfromfile("middlecoils.dict")
         elif self.view.advWin.coilP.rb3.GetValue():
-            pub.sendMessage("status.update", status="Outer coils selected")
-            self.tmpcoils = self.getModelCoilsfromfile("outercoils.dict")
+            pub.sendMessage("status.update", status="Complete MSR selected")
+            self.tmpcoils = self.getModelCoilsfromfile("SmallRohrer_MSR.dict")
         elif self.view.advWin.coilP.rb4.GetValue():
-            pub.sendMessage("status.update", status="All coils selected")
+            pub.sendMessage("status.update", status="bla selected")
             self.tmpcoils = self.getModelCoilsfromfile("allcoils.dict")
         else:
             # Fehlerfall
