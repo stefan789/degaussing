@@ -50,6 +50,7 @@ class Model():
             if self.checkCoils(coils):
                 self.coils = coils
                 pub.sendMessage("COILCHANGE", status=self.coils)
+                pub.sendMessage("status.update", status="%s selected" %str(dictfile))
             else:
                 pub.sendMessage("COILCHANGE", status = "Error: file wrong")
     
