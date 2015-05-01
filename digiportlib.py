@@ -30,7 +30,10 @@ class VoltageDivider():
 class DigitalInput():
     def __init__(self, dev):
         self.dev = dev
-        self.input_str = dev+"/port0/line24:31,"+dev+"/port2/line0:7"
+        # all DigitalInputs
+        #self.input_str = dev+"/port0/line24:31,"+dev+"/port2/line0:7"
+        # for MSR only
+        self.input_str = dev+"/port0/line24:27"
         self.ditask = nidaqmx.DigitalInputTask()
         self.ditask.create_channel(self.input_str)
 
@@ -63,8 +66,8 @@ class SwitchCoil():
 
     def alloff(self):
         curstate = self.di.read()
-        if 1 in curstate:
-            curon = np.where(curstate==1)[0]
+        if 0 in curstate:
+            curon = np.where(curstate==0)[1]
             #print curon
             for a in curon:
                 self.do.switch(a)
@@ -73,12 +76,13 @@ class SwitchCoil():
 
     def activate(self, nr):
         self.do.switch(nr)
-	    time.sleep(1)
-	    pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
+        time.sleep(1)
+        pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
+    
     def deactivate(self, nr):
         self.do.switch(nr)
-	    time.sleep(1)
-	    pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
+        time.sleep(1)
+        pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
 
 """    
 def activate(self, nr):
