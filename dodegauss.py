@@ -14,7 +14,7 @@ class Degausser():
         '''create waveform from given parameters'''
         self.sampleRate = sampleRate
         t = numpy.linspace(0, duration, duration*sampleRate + 1)
-        x = (-1) * numpy.sin( 2*numpy.math.pi * freq * t ) * numpy.piecewise(t, [t<keeptime, t>=keeptime], [amp, lambda t: -((t-keeptime) * amp/(duration-keeptime))+amp])
+        x = offset + ( (-1) * numpy.sin( 2*numpy.math.pi * freq * t ) * numpy.piecewise(t, [t<keeptime, t>=keeptime], [amp, lambda t: -((t-keeptime) * amp/(duration-keeptime))+amp]))
         self.periodLength = len( x )
         self.time = t
         self.data = numpy.zeros( (self.periodLength, ), dtype = numpy.float64)

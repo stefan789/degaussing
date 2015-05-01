@@ -73,12 +73,12 @@ class SwitchCoil():
 
     def activate(self, nr):
         self.do.switch(nr)
-	time.sleep(1)
-	pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
+	    time.sleep(1)
+	    pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
     def deactivate(self, nr):
         self.do.switch(nr)
-	time.sleep(1)
-	pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
+	    time.sleep(1)
+	    pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
 
 """    
 def activate(self, nr):
