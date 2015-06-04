@@ -14,7 +14,7 @@ class controldegauss():
         self.degcoils.pop("Device")
         self.offset = self.degcoils["Offset"]
         self.degcoils.pop("Offset")
-        self.degcoils.pop("All")
+        #self.degcoils.pop("All")
         
         self.dega = deg.Degausser(str(self.dev),0)
 
