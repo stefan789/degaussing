@@ -6,7 +6,7 @@ import controldeg
 import copy
 
 class DegaussingWorkerThread(threading.Thread):
-    """ 
+    """
     dogaussing in own thread so that gui does not lock
     """
     def __init__(self, coils, runs):
@@ -53,7 +53,7 @@ class Model():
                 pub.sendMessage("status.update", status="%s selected" %str(dictfile))
             else:
                 pub.sendMessage("COILCHANGE", status = "Error: file wrong")
-    
+
     def degauss(self, runs):
         self.degaussingcontrol = DegaussingWorkerThread(self.coils, runs)
         self.degaussingcontrol.start()
@@ -67,4 +67,3 @@ class Model():
 
     def readSwitch(self):
         pass
-

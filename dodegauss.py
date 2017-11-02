@@ -34,4 +34,8 @@ class Degausser():
     def abortWaveform(self):
         if self.mythread:
             self.mythread.stop()
+            self.mythreadend = wft.WaveformThread(self.device, self.chnnr, 0, 10, 0.1)
+            self.mythreadend.start()
+            self.mythreadend.join()
+            self.mythreadend.__del__()
 

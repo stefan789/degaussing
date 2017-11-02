@@ -139,7 +139,7 @@ class Controller:
             pub.sendMessage("status.update", status="Complete MSR selected")
             self.tmpcoils = self.getModelCoilsfromfile("allcoils.dict")
         elif self.view.advWin.coilP.rb4.GetValue():
-            pub.sendMessage("status.update", status="bla selected")
+            pub.sendMessage("status.update", status="Insert selected")
             self.tmpcoils = self.getModelCoilsfromfile("allcoils.dict")
         else:
             # Fehlerfall
@@ -197,7 +197,7 @@ class Controller:
             pub.sendMessage("status.update", status="cComplete MSR selected")
             self.tmpcoils = self.getModelCoilsfromfile("allcoils.dict")
         elif self.view.advWin.coilP.rb4.GetValue():
-            pub.sendMessage("status.update", status="bla selected")
+            pub.sendMessage("status.update", status="Insert selected")
             self.tmpcoils = self.getModelCoilsfromfile("allcoils.dict")
         else:
             # Fehlerfall
