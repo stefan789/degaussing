@@ -74,29 +74,30 @@ class SwitchCoil():
         pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
         #print self.di.read()
 
-#    def activate(self, nr):
-#        self.do.switch(nr)
-#        time.sleep(1)
-#        pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
+    def activate(self, nr):
+        self.do.switch(nr)
+        time.sleep(1)
+        pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
     
     def deactivate(self, nr):
         self.do.switch(nr)
         time.sleep(1)
         pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))   
         
-    def activate(self, nr):
-        if nr > self.nrchans-1:
-            pass
-        else:
-            curstate = self.di.read()
-            if 0 in curstate:
-                curon = np.where(curstate==0)[0]
-                print curon
-                for a in curon:
-                    if a != nr:
-                        self.do.switch(a)
-            if curstate[nr] == 0:
-                pass
-            if curstate[nr] == 1:
-                self.do.switch(nr)
-        pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
+ #   def activate(self, nr):
+ #       if nr > self.nrchans-1:
+ #           pass
+ #       else:
+ #           curstate = self.di.read()
+ #           if 0 in curstate:
+ #               curon = np.where(curstate==0)[0]
+ #               print curon
+ #               for a in curon:
+ #                   if a != nr:
+ #                       self.do.switch(a)
+ #           if curstate[nr] == 0:
+ #               pass
+ #           if curstate[nr] == 1:
+ #               self.do.switch(nr)
+ #       pub.sendMessage("status.update", status="Relay states: %s" % str(self.di.read()))
+ 

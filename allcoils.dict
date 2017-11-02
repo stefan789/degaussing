@@ -1,51 +1,43 @@
 {
     "L coil": {
-        "Amp": 9.8,
+        "Amp": 9,
         "Freq": 10,
         "Dur": 50,
         "Keep": 10,
-        "RelayPort": 2,
-        "VoltageDivider": 4
+        "RelayPort": 0,
+        "VoltageDivider": 5
     },
-    "A-X": {
-        "Amp": 9.8,
+   "A-X": {
+        "Amp": 9,
+        "Freq": 10,
+        "Dur": 100,
+        "Keep": 10,
+        "RelayPort": 1,
+        "VoltageDivider": 5
+    },
+    "A-Z": {
+        "Amp": 9,
         "Freq": 10,
         "Dur": 100,
         "Keep": 10,
         "RelayPort": 3,
-        "VoltageDivider": 2
-    },
-    "A-Z": {
-        "Amp": 9.8,
-        "Freq": 10,
-        "Dur": 100,
-        "Keep": 10,
-        "RelayPort": 4,
-        "VoltageDivider": 2
+        "VoltageDivider": 5
     },
     "A-Y": {
-        "Amp": 9.8,
+        "Amp": 8.7,
         "Freq": 10,
         "Dur": 100,
         "Keep": 10,
-        "RelayPort": 7,
-        "VoltageDivider": 3
+        "RelayPort": 2,
+        "VoltageDivider": 5
     },
     "L coil2": {
-        "Amp": 9.8,
+        "Amp": 9,
         "Freq": 10,
         "Dur": 50,
         "Keep": 10,
-        "RelayPort": 2,
-        "VoltageDivider": 4
-    },
-    "All": {
-        "Amp": 0,
-        "Freq": 16,
-        "Dur": 100,
-        "Keep": 1,
-        "RelayPort": 7,
-        "VoltageDivider": 1
+        "RelayPort": 0,
+        "VoltageDivider": 5
     },
     "Offset": 0,
     "Device": "Dev1"

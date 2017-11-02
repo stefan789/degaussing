@@ -1,19 +1,11 @@
 {
     "L coil": {
-        "Amp": 9.8,
+        "Amp": 9,
         "Freq": 10,
         "Dur": 50,
         "Keep": 10,
-        "RelayPort": 2,
-        "VoltageDivider": 4
-    },
-    "All": {
-        "Amp": 0,
-        "Freq": 16,
-        "Dur": 5,
-        "Keep": 1,
         "RelayPort": 0,
-        "VoltageDivider": 1
+        "VoltageDivider": 0
     },
     "Offset": 0,
     "Device": "Dev1"

@@ -23,7 +23,7 @@ class advCoilPanel(wx.Panel):
         self.labelrb1 = wx.StaticText(self.panel, label = "MSR, Inner layer")
         self.labelrb2 = wx.StaticText(self.panel, label = "MSR, Outer layer")
         self.labelrb3 = wx.StaticText(self.panel, label = "MSR, Complete")
-        self.labelrb4 = wx.StaticText(self.panel, label = "blablabla")
+        self.labelrb4 = wx.StaticText(self.panel, label = "Insert")
         self.labelrb5 = wx.StaticText(self.panel, label = "Custom coil file")
 #        self.text = wx.TextCtrl(self.panel)
         self.coilfi = wx.ComboBox(self.panel, -1, "", wx.DefaultPosition, (200,-1), "", wx.CB_DROPDOWN)
